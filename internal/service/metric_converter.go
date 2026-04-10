@@ -3,8 +3,8 @@ package service
 import (
 	"fmt"
 
-	"github.com/dushixiang/pika/internal/protocol"
-	"github.com/dushixiang/pika/internal/vmclient"
+	"github.com/wybroot/sentinel/internal/protocol"
+	"github.com/wybroot/sentinel/internal/vmclient"
 )
 
 // convertToMetrics 将指标数据转换为 VictoriaMetrics Metric 对象

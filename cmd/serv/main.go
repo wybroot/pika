@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/dushixiang/pika/internal"
-	"github.com/dushixiang/pika/internal/config"
-	v0_0_13 "github.com/dushixiang/pika/internal/migrate/v0_0_13"
-	"github.com/dushixiang/pika/internal/vmclient"
+	"github.com/wybroot/sentinel/internal"
+	"github.com/wybroot/sentinel/internal/config"
+	v0_0_13 "github.com/wybroot/sentinel/internal/migrate/v0_0_13"
+	"github.com/wybroot/sentinel/internal/vmclient"
 	"github.com/go-orz/orz"
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
@@ -19,9 +19,9 @@ import (
 var (
 	configFile string
 	rootCmd    = &cobra.Command{
-		Use:   "pika-server",
-		Short: "Pika 服务器监控系统",
-		Long:  `Pika 是一个轻量级的服务器监控系统，支持多探针部署和实时监控。`,
+		Use:   "sentinel-server",
+		Short: "哨兵监控服务器",
+		Long:  `Sentinel 是一个轻量级的服务器监控系统，支持多探针部署和实时监控。`,
 		Run: func(cmd *cobra.Command, args []string) {
 			internal.Run(configFile)
 		},
@@ -29,8 +29,8 @@ var (
 
 	serveCmd = &cobra.Command{
 		Use:   "serve",
-		Short: "启动 Pika 服务器",
-		Long:  `启动 Pika HTTP 服务器，提供 Web 界面和 API 服务。`,
+		Short: "启动 Sentinel 服务器",
+		Long:  `启动 Sentinel HTTP 服务器，提供 Web 界面和 API 服务。`,
 		Run: func(cmd *cobra.Command, args []string) {
 			internal.Run(configFile)
 		},
@@ -64,7 +64,7 @@ func main() {
 
 // runMigration 执行数据迁移
 func runMigration(configPath string) {
-	fmt.Println("=== Pika 数据迁移工具 ===")
+	fmt.Println("=== Sentinel 数据迁移工具 ===")
 	fmt.Println("配置文件:", configPath)
 	fmt.Println()
 
@@ -147,7 +147,7 @@ func runMigration(configPath string) {
 	}
 
 	fmt.Println()
-	fmt.Println("提示: 现在可以启动服务器: ./pika-server serve")
+	fmt.Println("提示: 现在可以启动服务器: ./sentinel-server serve")
 }
 
 // provideVMClient 提供 VictoriaMetrics 客户端

@@ -1,8 +1,8 @@
 package collector
 
 import (
-	"github.com/dushixiang/pika/internal/protocol"
-	"github.com/dushixiang/pika/pkg/agent/config"
+	"github.com/wybroot/sentinel/internal/protocol"
+	"github.com/wybroot/sentinel/pkg/agent/config"
 	"github.com/shirou/gopsutil/v4/disk"
 )
 

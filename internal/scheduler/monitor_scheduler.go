@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dushixiang/pika/internal/service"
+	"github.com/wybroot/sentinel/internal/service"
 	"github.com/robfig/cron/v3"
 	"go.uber.org/zap"
 )

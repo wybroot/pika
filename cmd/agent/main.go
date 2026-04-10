@@ -8,9 +8,9 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/dushixiang/pika/pkg/agent/config"
-	"github.com/dushixiang/pika/pkg/agent/service"
-	"github.com/dushixiang/pika/pkg/agent/updater"
+	"github.com/wybroot/sentinel/pkg/agent/config"
+	"github.com/wybroot/sentinel/pkg/agent/service"
+	"github.com/wybroot/sentinel/pkg/agent/updater"
 	"github.com/spf13/cobra"
 )
 
@@ -21,8 +21,8 @@ var (
 // rootCmd 根命令
 var rootCmd = &cobra.Command{
 	Use:   "agent",
-	Short: "Pika 监控探针",
-	Long:  `Pika Agent 是一个轻量级的系统监控探针，用于采集服务器的各项性能指标并上报到 Pika 服务端。`,
+	Short: "哨兵监控探针",
+	Long:  `Sentinel Agent 是一个轻量级的系统监控探针，用于采集服务器的各项性能指标并上报到 Sentinel 服务端。`,
 	Run: func(cmd *cobra.Command, args []string) {
 		_ = cmd.Help()
 	},
@@ -33,7 +33,7 @@ var versionCmd = &cobra.Command{
 	Use:   "version",
 	Short: "显示版本信息",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("Pika Agent v%s\n", service.GetVersion())
+		fmt.Printf("Sentinel Agent v%s\n", service.GetVersion())
 		fmt.Printf("OS: %s\n", runtime.GOOS)
 		fmt.Printf("Arch: %s\n", runtime.GOARCH)
 		fmt.Printf("Go Version: %s\n", runtime.Version())
@@ -387,7 +387,7 @@ func registerAgent(cmd *cobra.Command, args []string) {
 	reader := bufio.NewReader(os.Stdin)
 
 	log.Println("═══════════════════════════════════════")
-	log.Println("   🚀 Pika Agent 注册向导")
+	log.Println("   🚀 Sentinel Agent 注册向导")
 	log.Println("═══════════════════════════════════════")
 	log.Println()
 
@@ -539,7 +539,7 @@ func showInfo(cmd *cobra.Command, args []string) {
 	}
 
 	fmt.Println("═══════════════════════════════════════")
-	fmt.Println("   📋 Pika Agent 配置信息")
+	fmt.Println("   📋 Sentinel Agent 配置信息")
 	fmt.Println("═══════════════════════════════════════")
 	fmt.Println()
 

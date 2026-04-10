@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dushixiang/pika/internal/protocol"
+	"github.com/wybroot/sentinel/internal/protocol"
 )
 
 // UserAssetsCollector 用户资产收集器

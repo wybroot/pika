@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/dushixiang/pika/internal/protocol"
+	"github.com/wybroot/sentinel/internal/protocol"
 	"github.com/shirou/gopsutil/v4/sensors"
 )
 

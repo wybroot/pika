@@ -1,8 +1,8 @@
 package metric
 
 import (
-	"github.com/dushixiang/pika/internal/models"
-	"github.com/dushixiang/pika/internal/protocol"
+	"github.com/wybroot/sentinel/internal/models"
+	"github.com/wybroot/sentinel/internal/protocol"
 )
 
 // DiskSummary 磁盘汇总数据

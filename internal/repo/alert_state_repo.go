@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/dushixiang/pika/internal/models"
+	"github.com/wybroot/sentinel/internal/models"
 	"gorm.io/gorm"
 )
 

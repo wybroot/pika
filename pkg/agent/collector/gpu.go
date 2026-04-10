@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/dushixiang/pika/internal/protocol"
+	"github.com/wybroot/sentinel/internal/protocol"
 )
 
 // gpuStaticInfo GPU 静态信息

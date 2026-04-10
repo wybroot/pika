@@ -12,7 +12,7 @@ import (
 
 	probing "github.com/prometheus-community/pro-bing"
 
-	"github.com/dushixiang/pika/internal/protocol"
+	"github.com/wybroot/sentinel/internal/protocol"
 )
 
 // MonitorCollector 监控采集器

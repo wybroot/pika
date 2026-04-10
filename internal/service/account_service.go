@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/dushixiang/pika/internal/config"
+	"github.com/wybroot/sentinel/internal/config"
 	"github.com/go-errors/errors"
 	"github.com/golang-jwt/jwt/v5"
 	"go.uber.org/zap"

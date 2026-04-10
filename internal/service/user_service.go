@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/dushixiang/pika/internal/config"
+	"github.com/wybroot/sentinel/internal/config"
 	"go.uber.org/zap"
 	"golang.org/x/crypto/bcrypt"
 )

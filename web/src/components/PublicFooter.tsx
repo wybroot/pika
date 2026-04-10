@@ -14,14 +14,14 @@ const PublicFooter = () => {
                             <span className="text-slate-300 dark:text-cyan-900">|</span>
                             {/* GitHub 链接 */}
                             <a
-                                href="https://github.com/dushixiang/pika"
+                                href="https://github.com/wybroot/sentinel"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-1.5 text-slate-600 dark:text-cyan-500 hover:text-cyan-500 dark:hover:text-cyan-300 transition-colors group"
                                 title="查看 GitHub 仓库"
                             >
                                 <Github className="h-3 w-3 group-hover:scale-110 transition-transform"/>
-                                <span className="underline decoration-slate-400 dark:decoration-cyan-700 underline-offset-2">Pika Monitor</span>
+                                <span className="underline decoration-slate-400 dark:decoration-cyan-700 underline-offset-2">Sentinel Monitor</span>
                             </a>
                             <span className="text-slate-300 dark:text-cyan-900">|</span>
                             <span className="text-slate-500 dark:text-cyan-500/80 tracking-wider">保持洞察 · 稳定运行</span>

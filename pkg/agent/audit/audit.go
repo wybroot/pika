@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dushixiang/pika/internal/protocol"
+	"github.com/wybroot/sentinel/internal/protocol"
 )
 
 // 状态常量

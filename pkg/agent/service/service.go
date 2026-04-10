@@ -8,9 +8,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/dushixiang/pika/pkg/agent/config"
-	"github.com/dushixiang/pika/pkg/agent/sysutil"
-	"github.com/dushixiang/pika/pkg/agent/updater"
+	"github.com/wybroot/sentinel/pkg/agent/config"
+	"github.com/wybroot/sentinel/pkg/agent/sysutil"
+	"github.com/wybroot/sentinel/pkg/agent/updater"
 	"github.com/kardianos/service"
 )
 
@@ -58,7 +58,7 @@ func startAgent(ctx context.Context, cfg *config.Config) *Agent {
 
 // Start 启动服务
 func (p *program) Start(s service.Service) error {
-	log.Println("✅ Pika Agent 服务启动中...")
+	log.Println("✅ Sentinel Agent 服务启动中...")
 
 	// 初始化系统配置（Linux ICMP 权限等）
 	configureICMP()
@@ -74,7 +74,7 @@ func (p *program) Start(s service.Service) error {
 
 // Stop 停止服务
 func (p *program) Stop(s service.Service) error {
-	log.Println("📴 Pika Agent 服务停止中...")
+	log.Println("📴 Sentinel Agent 服务停止中...")
 
 	if p.cancel != nil {
 		p.cancel()
@@ -84,7 +84,7 @@ func (p *program) Stop(s service.Service) error {
 		p.agent.Stop()
 	}
 
-	log.Println("✅ Pika Agent 服务已停止")
+	log.Println("✅ Sentinel Agent 服务已停止")
 	return nil
 }
 
@@ -105,8 +105,8 @@ func NewServiceManager(cfg *config.Config) (*ServiceManager, error) {
 	// 配置服务
 	svcConfig := &service.Config{
 		Name:        "pika-agent",
-		DisplayName: "Pika Agent",
-		Description: "Pika 监控探针 - 采集系统性能指标并上报到服务端",
+		DisplayName: "Sentinel Agent",
+		Description: "Sentinel 监控探针 - 采集系统性能指标并上报到服务端",
 		Arguments:   []string{"run", "--config", cfg.Path},
 		Executable:  execPath,
 		Option: service.KeyValue{

@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dushixiang/pika/internal/protocol"
+	"github.com/wybroot/sentinel/internal/protocol"
 )
 
 // 默认 IPv4 API 列表

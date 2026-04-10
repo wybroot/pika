@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/dushixiang/pika/internal/ddns"
-	"github.com/dushixiang/pika/internal/models"
-	"github.com/dushixiang/pika/internal/protocol"
-	"github.com/dushixiang/pika/internal/repo"
-	"github.com/dushixiang/pika/internal/websocket"
+	"github.com/wybroot/sentinel/internal/ddns"
+	"github.com/wybroot/sentinel/internal/models"
+	"github.com/wybroot/sentinel/internal/protocol"
+	"github.com/wybroot/sentinel/internal/repo"
+	"github.com/wybroot/sentinel/internal/websocket"
 
 	"github.com/go-orz/toolkit/syncx"
 	"github.com/google/uuid"

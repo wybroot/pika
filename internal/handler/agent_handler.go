@@ -10,13 +10,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dushixiang/pika"
-	"github.com/dushixiang/pika/internal/models"
-	"github.com/dushixiang/pika/internal/protocol"
-	"github.com/dushixiang/pika/internal/service"
-	"github.com/dushixiang/pika/internal/utils"
-	ws "github.com/dushixiang/pika/internal/websocket"
-	"github.com/dushixiang/pika/pkg/version"
+	"github.com/wybroot/sentinel"
+	"github.com/wybroot/sentinel/internal/models"
+	"github.com/wybroot/sentinel/internal/protocol"
+	"github.com/wybroot/sentinel/internal/service"
+	"github.com/wybroot/sentinel/internal/utils"
+	ws "github.com/wybroot/sentinel/internal/websocket"
+	"github.com/wybroot/sentinel/pkg/version"
 	"github.com/go-orz/orz"
 	"github.com/gorilla/websocket"
 	"github.com/labstack/echo/v4"
@@ -886,7 +886,7 @@ register_agent() {
 
 # 主流程
 main() {
-    echo_info "开始安装 Pika Agent..."
+    echo_info "开始安装 Sentinel Agent..."
     echo ""
 
     detect_platform

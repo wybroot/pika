@@ -16,8 +16,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dushixiang/pika/internal/models"
-	"github.com/dushixiang/pika/internal/utils"
+	"github.com/wybroot/sentinel/internal/models"
+	"github.com/wybroot/sentinel/internal/utils"
 	"github.com/go-orz/cache"
 	"github.com/valyala/fasttemplate"
 	"go.uber.org/zap"
@@ -827,10 +827,10 @@ func (n *Notifier) sendEmailByConfig(ctx context.Context, config map[string]inte
 		return fmt.Errorf("邮件配置缺少 toEmail")
 	}
 
-	// 邮件主题，默认为"Pika 告警通知"
+	// 邮件主题，默认为"Sentinel 告警通知"
 	subject, ok := config["subject"].(string)
 	if !ok || subject == "" {
-		subject = "Pika 告警通知"
+		subject = "Sentinel 告警通知"
 	}
 
 	return n.sendEmail(ctx, smtpHost, smtpPort, fromEmail, password, toEmail, subject, message)

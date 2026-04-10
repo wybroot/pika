@@ -8,9 +8,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/dushixiang/pika/internal/models"
-	"github.com/dushixiang/pika/internal/protocol"
-	"github.com/dushixiang/pika/internal/repo"
+	"github.com/wybroot/sentinel/internal/models"
+	"github.com/wybroot/sentinel/internal/protocol"
+	"github.com/wybroot/sentinel/internal/repo"
 	"github.com/go-orz/orz"
 	"go.uber.org/zap"
 	"gorm.io/gorm"

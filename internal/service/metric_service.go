@@ -7,11 +7,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/dushixiang/pika/internal/metric"
-	"github.com/dushixiang/pika/internal/models"
-	"github.com/dushixiang/pika/internal/protocol"
-	"github.com/dushixiang/pika/internal/repo"
-	"github.com/dushixiang/pika/internal/vmclient"
+	"github.com/wybroot/sentinel/internal/metric"
+	"github.com/wybroot/sentinel/internal/models"
+	"github.com/wybroot/sentinel/internal/protocol"
+	"github.com/wybroot/sentinel/internal/repo"
+	"github.com/wybroot/sentinel/internal/vmclient"
 	"github.com/go-orz/toolkit/syncx"
 
 	"github.com/go-orz/cache"

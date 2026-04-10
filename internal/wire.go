@@ -6,12 +6,12 @@ package internal
 import (
 	"time"
 
-	"github.com/dushixiang/pika/internal/config"
-	"github.com/dushixiang/pika/internal/handler"
-	"github.com/dushixiang/pika/internal/repo"
-	"github.com/dushixiang/pika/internal/service"
-	"github.com/dushixiang/pika/internal/vmclient"
-	"github.com/dushixiang/pika/internal/websocket"
+	"github.com/wybroot/sentinel/internal/config"
+	"github.com/wybroot/sentinel/internal/handler"
+	"github.com/wybroot/sentinel/internal/repo"
+	"github.com/wybroot/sentinel/internal/service"
+	"github.com/wybroot/sentinel/internal/vmclient"
+	"github.com/wybroot/sentinel/internal/websocket"
 	"github.com/google/wire"
 	"go.uber.org/zap"
 	"gorm.io/gorm"

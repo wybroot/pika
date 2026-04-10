@@ -1,7 +1,7 @@
 package metric
 
 import (
-	"github.com/dushixiang/pika/internal/protocol"
+	"github.com/wybroot/sentinel/internal/protocol"
 	"github.com/go-orz/toolkit/syncx"
 )
 

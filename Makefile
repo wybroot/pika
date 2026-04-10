@@ -18,8 +18,8 @@ GO_VERSION=$(shell go version)
 BUILD_TIME=$(shell date +%Y-%m-%d_%H:%M:%S)
 
 # Go 构建参数
-LDFLAGS=-s -w -X 'github.com/dushixiang/pika/pkg/version.Version=$(VERSION)' -X 'github.com/dushixiang/pika/pkg/version.AgentVersion=$(AGENT_VERSION)'
-AGENT_LDFLAGS=-s -w -X 'github.com/dushixiang/pika/pkg/version.Version=$(VERSION)' -X 'github.com/dushixiang/pika/pkg/version.AgentVersion=$(AGENT_VERSION)'
+LDFLAGS=-s -w -X 'github.com/wybroot/sentinel/pkg/version.Version=$(VERSION)' -X 'github.com/wybroot/sentinel/pkg/version.AgentVersion=$(AGENT_VERSION)'
+AGENT_LDFLAGS=-s -w -X 'github.com/wybroot/sentinel/pkg/version.Version=$(VERSION)' -X 'github.com/wybroot/sentinel/pkg/version.AgentVersion=$(AGENT_VERSION)'
 GOFLAGS=CGO_ENABLED=0
 
 # 构建前端
@@ -28,15 +28,15 @@ build-web:
 
 # 构建服务端（开发）
 build-server:
-	$(GOFLAGS) GOOS=linux GOARCH=amd64 go build -ldflags="$(LDFLAGS)" -o bin/pika-linux-amd64 cmd/serv/main.go
-	upx bin/pika-linux-amd64
+	$(GOFLAGS) GOOS=linux GOARCH=amd64 go build -ldflags="$(LDFLAGS)" -o bin/sentinel-linux-amd64 cmd/serv/main.go
+	upx bin/sentinel-linux-amd64
 
 build-servers:
-	$(GOFLAGS) GOOS=linux GOARCH=amd64 go build -ldflags="$(LDFLAGS)" -o bin/pika-linux-amd64 cmd/serv/main.go
-	$(GOFLAGS) GOOS=linux GOARCH=arm64 go build -ldflags="$(LDFLAGS)" -o bin/pika-linux-arm64 cmd/serv/main.go
+	$(GOFLAGS) GOOS=linux GOARCH=amd64 go build -ldflags="$(LDFLAGS)" -o bin/sentinel-linux-amd64 cmd/serv/main.go
+	$(GOFLAGS) GOOS=linux GOARCH=arm64 go build -ldflags="$(LDFLAGS)" -o bin/sentinel-linux-arm64 cmd/serv/main.go
 
-	upx bin/pika-linux-amd64
-	upx bin/pika-linux-arm64
+	upx bin/sentinel-linux-amd64
+	upx bin/sentinel-linux-arm64
 
 # 构建所有平台的 Agent
 build-agents:
@@ -46,24 +46,24 @@ build-agents:
 	@mkdir -p bin/agents
 
 	# Linux
-	$(GOFLAGS) GOOS=linux GOARCH=amd64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/pika-agent-linux-amd64 cmd/agent/*.go
-	$(GOFLAGS) GOOS=linux GOARCH=arm64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/pika-agent-linux-arm64 cmd/agent/*.go
-	$(GOFLAGS) GOOS=linux GOARCH=arm GOARM=7 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/pika-agent-linux-armv7 cmd/agent/*.go
-	$(GOFLAGS) GOOS=linux GOARCH=loong64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/pika-agent-linux-loong64 cmd/agent/*.go
+	$(GOFLAGS) GOOS=linux GOARCH=amd64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/sentinel-agent-linux-amd64 cmd/agent/*.go
+	$(GOFLAGS) GOOS=linux GOARCH=arm64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/sentinel-agent-linux-arm64 cmd/agent/*.go
+	$(GOFLAGS) GOOS=linux GOARCH=arm GOARM=7 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/sentinel-agent-linux-armv7 cmd/agent/*.go
+	$(GOFLAGS) GOOS=linux GOARCH=loong64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/sentinel-agent-linux-loong64 cmd/agent/*.go
 
 	# macOS
-	$(GOFLAGS) GOOS=darwin GOARCH=amd64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/pika-agent-darwin-amd64 cmd/agent/*.go
-	$(GOFLAGS) GOOS=darwin GOARCH=arm64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/pika-agent-darwin-arm64 cmd/agent/*.go
+	$(GOFLAGS) GOOS=darwin GOARCH=amd64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/sentinel-agent-darwin-amd64 cmd/agent/*.go
+	$(GOFLAGS) GOOS=darwin GOARCH=arm64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/sentinel-agent-darwin-arm64 cmd/agent/*.go
 
 	# Windows
-	$(GOFLAGS) GOOS=windows GOARCH=amd64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/pika-agent-windows-amd64.exe cmd/agent/*.go
-	$(GOFLAGS) GOOS=windows GOARCH=arm64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/pika-agent-windows-arm64.exe cmd/agent/*.go
+	$(GOFLAGS) GOOS=windows GOARCH=amd64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/sentinel-agent-windows-amd64.exe cmd/agent/*.go
+	$(GOFLAGS) GOOS=windows GOARCH=arm64 go build -ldflags="$(AGENT_LDFLAGS)" -o bin/agents/sentinel-agent-windows-arm64.exe cmd/agent/*.go
 
 	@echo "All agents built successfully!"
 	@echo "Compressing agents with UPX..."
-	@upx bin/agents/pika-agent-linux-amd64
-	@upx bin/agents/pika-agent-linux-arm64
-	@upx bin/agents/pika-agent-linux-armv7
+	@upx bin/agents/sentinel-agent-linux-amd64
+	@upx bin/agents/sentinel-agent-linux-arm64
+	@upx bin/agents/sentinel-agent-linux-armv7
 	@echo "All agents compressed successfully!"
 	@ls -lh bin/agents/
 

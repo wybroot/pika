@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/dushixiang/pika/internal/service"
+	"github.com/wybroot/sentinel/internal/service"
 	"github.com/go-orz/orz"
 	"github.com/labstack/echo/v4"
 	"go.uber.org/zap"

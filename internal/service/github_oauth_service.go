@@ -12,7 +12,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/dushixiang/pika/internal/config"
+	"github.com/wybroot/sentinel/internal/config"
 	"go.uber.org/zap"
 )
 

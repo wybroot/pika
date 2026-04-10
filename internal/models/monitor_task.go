@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/dushixiang/pika/internal/protocol"
+	"github.com/wybroot/sentinel/internal/protocol"
 	"gorm.io/datatypes"
 )
 

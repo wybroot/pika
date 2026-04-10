@@ -1,4 +1,4 @@
-module github.com/wybroot/sentinel
+module github.com/dushixiang/pika
 
 go 1.25.5
 

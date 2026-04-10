@@ -3,8 +3,8 @@ package handler
 import (
 	"time"
 
-	"github.com/dushixiang/pika/internal/models"
-	"github.com/dushixiang/pika/internal/service"
+	"github.com/wybroot/sentinel/internal/models"
+	"github.com/wybroot/sentinel/internal/service"
 	"github.com/go-orz/orz"
 	"github.com/google/uuid"
 	"github.com/labstack/echo/v4"

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/dushixiang/pika/internal/models"
-	"github.com/dushixiang/pika/internal/repo"
-	"github.com/dushixiang/pika/web"
+	"github.com/wybroot/sentinel/internal/models"
+	"github.com/wybroot/sentinel/internal/repo"
+	"github.com/wybroot/sentinel/web"
 	"github.com/go-orz/cache"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
@@ -224,8 +224,8 @@ func (s *PropertyService) InitializeDefaultConfigs(ctx context.Context) error {
 			ID:   PropertyIDSystemConfig,
 			Name: "系统配置",
 			Value: models.SystemConfig{
-				SystemNameZh: "皮卡监控",
-				SystemNameEn: "Pika Monitor",
+				SystemNameZh: "哨兵监控",
+				SystemNameEn: "Sentinel Monitor",
 				LogoBase64:   web.DefaultLogoBase64(),
 				ICPCode:      "",
 				DefaultView:  "grid",

@@ -5,7 +5,7 @@ package audit
 import (
 	"os"
 
-	"github.com/dushixiang/pika/internal/protocol"
+	"github.com/wybroot/sentinel/internal/protocol"
 )
 
 // fillFileOwnership 填充文件所有者和组信息 (Windows系统)
